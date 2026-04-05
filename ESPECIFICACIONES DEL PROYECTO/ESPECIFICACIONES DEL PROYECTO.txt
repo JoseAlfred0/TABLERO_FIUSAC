@@ -1,0 +1,14 @@
+TABLERO DE DATOS PARA LA FIUSAC
+
+Información general del proyecto en C:\Users\jose\Documents\USAC\MAESTRIA_ESTADISTICA_APLICADA\TABLERO_FINAL\ESPECIFICACIONES DEL PROYECTO\JOSE ALFREDO GONZÁLEZ DÍAZ  - PROTOCOLO FINAL - SEMINARIO DE INVESTIGACIÓN II.docx
+
+Descripción general
+
+Crear un tablaro de datos en R desde 2001 al 2024 utilizando las herramientas especificadas en el documento protocolo final de JOSE ALFREDO GONZÁLEZ DÍAZ  - PROTOCOLO FINAL - SEMINARIO DE INVESTIGACIÓN II.docx
+
+Es necesario generar el tablero de datos mediante un plan y que permita llevar a cabo un conjunto de pasos eficiente y efectivo para alcanzar los objetivos.  Necesito que hagas un plan estratégico, eficiente y efectivo para desarrollar el tablero de datos apoyándose en chatgpt, codex para hhacer mas eficiente el trabajo. 
+
+Los datos se encuentran en C:\Users\jose\Documents\USAC\MAESTRIA_ESTADISTICA_APLICADA\TABLERO_FINAL\DATOS
+Hay dos archivos, uno con información de estudiante y el otro con las notas durante el periodo. 
+
+generar un promp con un plan parar llevar a cabo los objetivos.   Entiendes lo que necesito.   el proyecto tiene que ser diseñado para almacenarse en GitHub y tener una estructura profesional, eficiente, sencilla y debe generarse con altos estándares de programación.   entiendes lo que necesito?

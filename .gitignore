@@ -1,0 +1,8 @@
+CODIGO_FUENTE/data/raw/
+CODIGO_FUENTE/data/processed/
+DATOS/
+*.csv
+*.rds
+*.parquet
+*.xlsx
+*.xls
