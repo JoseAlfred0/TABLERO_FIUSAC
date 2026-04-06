@@ -1,13 +1,13 @@
-# Módulo KPIs
+# Módulo KPIs (shinydashboard)
 
 mod_kpis_ui <- function(id) {
   ns <- NS(id)
   fluidRow(
-    column(2, valueBoxOutput(ns("kpi_aprob"))),
-    column(2, valueBoxOutput(ns("kpi_reprob"))),
-    column(2, valueBoxOutput(ns("kpi_retiro"))),
-    column(3, valueBoxOutput(ns("kpi_rend"))),
-    column(3, valueBoxOutput(ns("kpi_total")))
+    column(2, shinydashboard::valueBoxOutput(ns("kpi_aprob"), width = 12)),
+    column(2, shinydashboard::valueBoxOutput(ns("kpi_reprob"), width = 12)),
+    column(2, shinydashboard::valueBoxOutput(ns("kpi_retiro"), width = 12)),
+    column(3, shinydashboard::valueBoxOutput(ns("kpi_rend"), width = 12)),
+    column(3, shinydashboard::valueBoxOutput(ns("kpi_total"), width = 12))
   )
 }
 
@@ -16,30 +16,59 @@ mod_kpis_server <- function(id, data_filtrada) {
     kpis <- reactive({
       df <- data_filtrada()
       req(nrow(df) > 0)
-      total <- nrow(df)
+      
       tibble::tibble(
         aprob = 100 * mean(df$estado_academico == "Aprobado", na.rm = TRUE),
         reprob = 100 * mean(df$estado_academico == "Reprobado", na.rm = TRUE),
         retiro = 100 * mean(df$estado_academico == "Retirado", na.rm = TRUE),
         rend = mean(df$nota_final, na.rm = TRUE),
-        total = total
+        total = nrow(df)
       )
     })
-
-    output$kpi_aprob <- renderValueBox({
-      bslib::value_box(title = "Aprobación", value = sprintf("%.1f%%", kpis()$aprob), theme = "success")
+    
+    output$kpi_aprob <- shinydashboard::renderValueBox({
+      shinydashboard::valueBox(
+        value = sprintf("%.1f%%", kpis()$aprob),
+        subtitle = "Aprobación",
+        icon = shiny::icon("check-circle"),
+        color = "green"
+      )
     })
-    output$kpi_reprob <- renderValueBox({
-      bslib::value_box(title = "Reprobación", value = sprintf("%.1f%%", kpis()$reprob), theme = "danger")
+    
+    output$kpi_reprob <- shinydashboard::renderValueBox({
+      shinydashboard::valueBox(
+        value = sprintf("%.1f%%", kpis()$reprob),
+        subtitle = "Reprobación",
+        icon = shiny::icon("times-circle"),
+        color = "red"
+      )
     })
-    output$kpi_retiro <- renderValueBox({
-      bslib::value_box(title = "Retiro", value = sprintf("%.1f%%", kpis()$retiro), theme = "warning")
+    
+    output$kpi_retiro <- shinydashboard::renderValueBox({
+      shinydashboard::valueBox(
+        value = sprintf("%.1f%%", kpis()$retiro),
+        subtitle = "Retiro",
+        icon = shiny::icon("sign-out-alt"),
+        color = "yellow"
+      )
     })
-    output$kpi_rend <- renderValueBox({
-      bslib::value_box(title = "Rendimiento promedio", value = sprintf("%.2f", kpis()$rend), theme = "primary")
+    
+    output$kpi_rend <- shinydashboard::renderValueBox({
+      shinydashboard::valueBox(
+        value = sprintf("%.2f", kpis()$rend),
+        subtitle = "Rendimiento promedio",
+        icon = shiny::icon("chart-line"),
+        color = "aqua"
+      )
     })
-    output$kpi_total <- renderValueBox({
-      bslib::value_box(title = "Total evaluaciones", value = scales::comma(kpis()$total), theme = "secondary")
+    
+    output$kpi_total <- shinydashboard::renderValueBox({
+      shinydashboard::valueBox(
+        value = scales::comma(kpis()$total),
+        subtitle = "Total evaluaciones",
+        icon = shiny::icon("users"),
+        color = "blue"
+      )
     })
   })
 }
