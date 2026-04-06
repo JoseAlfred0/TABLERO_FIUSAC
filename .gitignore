@@ -1,3 +1,5 @@
+<<<<<<< ours
+<<<<<<< ours
 CODIGO_FUENTE/data/raw/
 CODIGO_FUENTE/data/processed/
 DATOS/
@@ -6,3 +8,55 @@ DATOS/
 *.parquet
 *.xlsx
 *.xls
+
+
+
+# Archivos de sesión de R
+.Rhistory
+.RData
+.Ruserdata
+
+# Carpeta renv local
+renv/library/
+renv/staging/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de proyecto RStudio
+.Rproj.user
+
+# Datos pesados procesados opcionales
+data/processed/*.rds
+data/processed/*.parquet
+
+# Archivos de salida
+output/
+docs/_build/
+
+# Claves o variables sensibles
+.env
+.env.local
+=======
+=======
+>>>>>>> theirs
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+renv/staging/
+*.Rproj
+*.log
+.DS_Store
+outputs/plots/*.png
+outputs/tables/*.csv
+<<<<<<< ours
+>>>>>>> theirs
+=======
+>>>>>>> theirs

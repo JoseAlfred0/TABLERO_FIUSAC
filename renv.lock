@@ -1,0 +1,6 @@
+{
+  "R": {
+    "Version": "4.3.0"
+  },
+  "Note": "Archivo inicial. Regenerar con renv::snapshot() en entorno con R."
+}
