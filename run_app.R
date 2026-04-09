@@ -1,4 +1,4 @@
-source("R/02_limpieza_y_etl.R")#!/usr/bin/env Rscript
+list.files("data/processed")
 
 if (!requireNamespace("shiny", quietly = TRUE)) {
   stop("Instale shiny. Ejecute renv::restore() primero.")
