@@ -1,0 +1,6 @@
+# config.yaml (opcional)
+data:
+  primary: "01_data/datos_2001_2024.csv"
+  legacy:  "datos/datos_2001_2024.csv"
+logging:
+  dir: "08_logs"
