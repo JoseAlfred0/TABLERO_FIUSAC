@@ -15,6 +15,29 @@
 # - Limpieza automática de memoria
 # ==============================================================================
 
+source(file.path("..", "R", "core", "logging.R"))
+source(file.path("..", "R", "core", "notifications.R"))
+source(file.path("..", "R", "core", "startup_checks.R"))
+source(file.path("..", "R", "core", "logging.R"))
+source(file.path("..", "R", "core", "notifications.R"))
+source(file.path("..", "R", "core", "startup_checks.R"))
+
+source(file.path("..", "R", "config", "paths.R"))
+
+source(file.path("..", "R", "data", "cleaning.R"))
+source(file.path("..", "R", "data", "loaders.R"))
+source(file.path("..", "R", "data", "cache.R"))
+
+source(file.path("..", "R", "modules", "filtros", "ui.R"))
+source(file.path("..", "R", "modules", "filtros", "server.R"))
+
+source(file.path("..", "R", "modules", "individual", "ui.R"))
+source(file.path("..", "R", "modules", "individual", "server.R"))
+
+source(file.path("..", "R", "modules", "institucional", "ui.R"))
+source(file.path("..", "R", "modules", "institucional", "server.R"))
+
+
 # ------------------------------------------------------------------------------
 # FUNCIÓN PARA MENSAJES FORMATEADOS
 # ------------------------------------------------------------------------------

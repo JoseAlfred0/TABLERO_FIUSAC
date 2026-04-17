@@ -4,6 +4,4 @@
 .Ruserdata
 *.bak
 03_shiny_app/datos/datos_2001_2024.csv
-
-03_shiny_app/datos/datos_complementarios.csv
 07_config/secrets.R
